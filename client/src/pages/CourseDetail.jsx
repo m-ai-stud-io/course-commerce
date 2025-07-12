@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { toast } from 'react-toastify';
-import { Button, Typography, Box, Container, CardMedia } from '@mui/material'; // Import Material UI components
+import { Button, Typography, Box, Container, CardMedia, Link as MuiLink } from '@mui/material'; // Import Material UI components
 
 const CourseDetail = () => {
   const { id } = useParams();

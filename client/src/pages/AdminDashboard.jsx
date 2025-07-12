@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CourseForm from '../components/CourseForm';
 import { toast } from 'react-toastify';
-import { Button, Typography, Box, Container, Grid, Card, CardContent, CardMedia } from '@mui/material'; // Import Material UI components
+import { Button, Typography, Box, Container, Grid, Card, CardContent, CardMedia, Link as MuiLink } from '@mui/material'; // Import Material UI components
 
 const AdminDashboard = () => {
   const [courses, setCourses] = useState([]);
