@@ -1,0 +1,125 @@
+
+/* Page Specific Backgrounds */
+.page-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.login-background {
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.register-background {
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.courses-background {
+  background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.course-detail-background {
+  background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.cart-background {
+  background-image: url('https://images.unsplash.com/photo-1505682634904-d7c805379085?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.checkout-background {
+  background-image: url('https://images.unsplash.com/photo-1505682634904-d7c805379085?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.dashboard-background {
+  background-image: url('https://images.unsplash.com/photo-1517292987719-0369a794cd8d?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.admin-dashboard-background {
+  background-image: url('https://images.unsplash.com/photo-1517292987719-0369a794cd8d?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .btn-primary, .btn-success, .btn-danger, .btn-info, .btn-warning {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  /* Navbar adjustments */
+  .nav-link, .nav-button {
+    font-size: 16px !important;
+  }
+
+  .styles-navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .styles-navItem {
+    margin: 5px 0;
+  }
+
+  /* Course Grid adjustments */
+  .styles-courseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Course Detail adjustments */
+  .styles-courseDetailCard {
+    padding: 20px;
+  }
+
+  .styles-title {
+    font-size: 1.8em;
+  }
+
+  .styles-description {
+    font-size: 1em;
+  }
+
+  .styles-price {
+    font-size: 1.2em;
+  }
+
+  .styles-buttonGroup button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  /* Cart adjustments */
+  .styles-cartItemCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .styles-itemImage {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .styles-cartSummary {
+    text-align: center;
+  }
+
+  .styles-checkoutButton, .styles-clearCartButton {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
