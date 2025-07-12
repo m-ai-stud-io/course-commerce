@@ -10,7 +10,7 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: 'YOUR_NETLIFY_FRONTEND_URL', // Replace with your Netlify frontend URL
+  origin: process.env.CORS_ORIGIN, // Use environment variable for CORS origin
   credentials: true,
 }));
 
