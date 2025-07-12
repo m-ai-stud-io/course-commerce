@@ -17,7 +17,7 @@ const AdminDashboard = () => {
   const fetchCourses = async () => {
     try {
       setLoading(true);
-      const res = await fetch('/api/courses');
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courses`);
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
@@ -122,7 +122,7 @@ const AdminDashboard = () => {
                       Price: ${course.price}
                     </Typography>
                     <Typography variant="body2" sx={{ fontSize: '14px', marginBottom: '15px' }}>
-                      Video: <a href={course.videoUrl} target="_blank" rel="noopener noreferrer">Link</a>
+                      Video: <MuiLink href={course.videoUrl} target="_blank" rel="noopener noreferrer">Link</MuiLink>
                     </Typography>
                     <Box sx={{ display: 'flex', gap: '10px', marginTop: '10px', justifyContent: 'center' }}>
                       <Button variant="contained" color="primary" onClick={() => handleEditCourse(course)}>Edit</Button>

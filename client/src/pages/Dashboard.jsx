@@ -25,7 +25,7 @@ const Dashboard = () => {
         setUser(decoded.user);
 
         // Fetch user orders
-        const ordersRes = await fetch('/api/orders', {
+        const ordersRes = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/orders`, {
           headers: {
             'x-auth-token': token,
           },

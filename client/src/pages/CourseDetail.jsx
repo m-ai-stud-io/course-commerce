@@ -14,7 +14,7 @@ const CourseDetail = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const res = await fetch(`/api/courses/${id}`);
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courses/${id}`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -74,7 +74,7 @@ const CourseDetail = () => {
             Price: ${course.price}
           </Typography>
           <Typography variant="body2" sx={{ marginBottom: '25px' }}>
-            Video: <a href={course.videoUrl} target="_blank" rel="noopener noreferrer">Watch Now</a>
+            Video: <MuiLink href={course.videoUrl} target="_blank" rel="noopener noreferrer">Watch Now</MuiLink>
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '20px' }}>
             <Button variant="contained" color="info" onClick={handleAddToCart}>Add to Cart</Button>

@@ -1,11 +1,19 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import cors
 
 dotenv.config();
 console.log('Loaded STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY);
 
 const app = express();
+
+// Configure CORS
+app.use(cors({
+  origin: 'YOUR_NETLIFY_FRONTEND_URL', // Replace with your Netlify frontend URL
+  credentials: true,
+}));
+
 app.use(express.json({ extended: false }));
 
 mongoose.connect(process.env.MONGO_URI, {

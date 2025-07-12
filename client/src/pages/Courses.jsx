@@ -11,7 +11,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await fetch('/api/courses');
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courses`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -68,7 +68,7 @@ const Courses = () => {
                     <Typography variant="h6" color="text.secondary">
                       ${course.price}
                     </Typography>
-                    <Button component={Link} to={`/courses/${course._id}`} variant="contained" color="primary" sx={{ mt: 2 }}>
+                    <Button component={Link} to={`/courses/${course._id}`} variant="contained" color="primary" sx={{ mt: 2, width: '100%' }}>
                       View Details
                     </Button>
                   </CardContent>

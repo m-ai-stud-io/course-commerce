@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Button, Typography, Box, Container, Card, CardContent, CardMedia } from '@mui/material'; // Import Material UI components
+import { Button, Typography, Box, Container, CardMedia } from '@mui/material'; // Import Material UI components
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -14,7 +14,6 @@ const CheckoutForm = () => {
   const { cartItems, getTotalPrice, clearCart } = useContext(CartContext);
   const stripe = useStripe();
   const elements = useElements();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
@@ -44,7 +43,7 @@ const CheckoutForm = () => {
     } else {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('/api/checkout', {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/checkout`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

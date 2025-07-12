@@ -41,7 +41,7 @@ const CourseForm = ({ course, onClose, onSubmitSuccess }) => {
     try {
       const token = localStorage.getItem('token');
       const method = course ? 'PUT' : 'POST';
-      const url = course ? `/api/courses/${course._id}` : '/api/courses';
+      const url = course ? `${process.env.REACT_APP_BACKEND_URL}/api/courses/${course._id}` : `${process.env.REACT_APP_BACKEND_URL}/api/courses`;
 
       const res = await fetch(url, {
         method,
@@ -68,7 +68,14 @@ const CourseForm = ({ course, onClose, onSubmitSuccess }) => {
 
   return (
     <Box sx={styles.overlay}>
-      <Box className="glass-card" sx={styles.modal}>
+      <Box className="glass-card" sx={{
+        padding: '30px',
+        width: '90%',
+        maxWidth: '500px',
+        maxHeight: '90vh',
+        overflowY: 'auto',
+        position: 'relative',
+      }}>
         <Typography variant="h5" component="h2" gutterBottom sx={{ textAlign: 'center', marginBottom: '20px' }}>{course ? 'Edit Course' : 'Add New Course'}</Typography>
         <form onSubmit={onSubmit}>
           <TextField

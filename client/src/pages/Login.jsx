@@ -19,7 +19,7 @@ const Login = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

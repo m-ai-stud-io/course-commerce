@@ -13,7 +13,6 @@ import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 
 function MainLayout() {
-  const [dbStatus, setDbStatus] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const navigate = useNavigate();
@@ -42,10 +41,6 @@ function MainLayout() {
   };
 
   useEffect(() => {
-    fetch('/api/db-status')
-      .then(res => res.text())
-      .then(data => setDbStatus(data));
-
     checkAuthStatus();
 
     window.addEventListener('authChange', checkAuthStatus);
